@@ -8,4 +8,4 @@ set DISTRO_NAME=%WSL_DISTRO_NAME%
 
 set DISTRO_USER=%WSL_DISTRO_USER%
 
-wsl -d %DOCKER_DISTRO% -u %USER_DISTRO% docker -H unix:///run/docker.sock %*
+wsl -d %DISTRO_NAME% -u %DISTRO_USER% docker -H unix:///run/docker.sock %*
