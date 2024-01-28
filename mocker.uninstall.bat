@@ -12,7 +12,7 @@ set DISTRO_USER=%WSL_DISTRO_USER%
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
 	timeout 1 >nul
-echo Uninstalling distro %DISTRO_NAME% ...
+    echo Uninstalling distro %DISTRO_NAME% for user %DISTRO_USER% ...
     echo ...
     wsl -t %DISTRO_NAME%
 	timeout 1 >nul
@@ -21,6 +21,10 @@ echo Uninstalling distro %DISTRO_NAME% ...
     echo Installation failed: Administrator PRIVILEGES Required! 
 	exit /B
 )
+
+reg delete HKCU\Environment /F /V WSL_DISTRO_NAME
+
+reg delete HKCU\Environment /F /V WSL_DISTRO_USER
 
 timeout 1 >nul
 
