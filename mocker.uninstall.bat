@@ -16,7 +16,7 @@ IF %ERRORLEVEL% EQU 0 (
     echo ...
     wsl -t %DISTRO_NAME%
 	timeout 1 >nul
-    wsl --unregister %WSL_DISTRO_NAME%
+    wsl --unregister %DISTRO_NAME%
 ) ELSE (
     echo Installation failed: Administrator PRIVILEGES Required! 
 	exit /B
