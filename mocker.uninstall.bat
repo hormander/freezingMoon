@@ -22,9 +22,9 @@ IF %ERRORLEVEL% EQU 0 (
 	exit /B
 )
 
-reg delete HKCU\Environment /F /V WSL_DISTRO_NAME
+setx /M WSL_DISTRO_NAME "" >nul 2>&1
 
-reg delete HKCU\Environment /F /V WSL_DISTRO_USER
+setx /M WSL_DISTRO_USER "" >nul 2>&1
 
 timeout 1 >nul
 
