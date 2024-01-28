@@ -10,14 +10,16 @@ if not exist "%ProgramFiles%\apps\bin" (
 
 icacls "%ProgramFiles%\apps\bin" /grant "everyone":(OI)(CI)M >nul 2>&1
 
-(for /f "delims=" %%i in (wsl/mocker.bat.txt) do (
-    set "line=%%i"
-    setlocal enabledelayedexpansion
-	set "line=!line:__my_wsl_distro__=%DISTRO_NAME%!"
-	set "line=!line:__my_wsl_user__=%DISTRO_USER%!"
-    echo !line!
-    endlocal
-))>"%ProgramFiles%\apps\bin\mocker.bat"
+rem (for /f "delims=" %%i in (wsl/mocker.bat.txt) do (
+rem     set "line=%%i"
+rem     setlocal enabledelayedexpansion
+rem set "line=!line:__my_wsl_distro__=%DISTRO_NAME%!"
+rem 	set "line=!line:__my_wsl_user__=%DISTRO_USER%!"
+rem     echo !line!
+rem     endlocal
+rem ))>"%ProgramFiles%\apps\bin\mocker.bat"
+
+copy wsl/mocker.bat.txt "%ProgramFiles%\apps\bin\docker.bat"
 
 icacls "%ProgramFiles%\apps\bin\mocker.bat" /grant "everyone":(OI)(CI)M >nul 2>&1
 

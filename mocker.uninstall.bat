@@ -4,7 +4,6 @@ rem
 rem IMPORTANT: Run the script as Administrator
 rem
 
-
 set DISTRO_NAME=%WSL_DISTRO_NAME%
 
 set DISTRO_USER=%WSL_DISTRO_USER%

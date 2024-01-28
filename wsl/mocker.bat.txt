@@ -4,8 +4,8 @@ rem
 rem https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
 rem 
 
-set DOCKER_DISTRO=__my_wsl_distro__
+set DISTRO_NAME=%WSL_DISTRO_NAME%
 
-set USER_DISTRO=__my_wsl_user__
+set DISTRO_USER=%WSL_DISTRO_USER%
 
 wsl -d %DOCKER_DISTRO% -u %USER_DISTRO% docker -H unix:///run/docker.sock %*
