@@ -19,7 +19,7 @@ rem     echo !line!
 rem     endlocal
 rem ))>"%ProgramFiles%\apps\bin\mocker.bat"
 
-copy wsl/mocker.bat.txt "%ProgramFiles%\apps\bin\docker.bat"
+type wsl/mocker.bat.txt > "%ProgramFiles%\apps\bin\docker.bat"
 
 icacls "%ProgramFiles%\apps\bin\mocker.bat" /grant "everyone":(OI)(CI)M >nul 2>&1
 
