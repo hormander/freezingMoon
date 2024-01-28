@@ -6,10 +6,14 @@ It works over WSL (alpine distro)
 
 ## Install
 
-Download the project and run the command:
+Download the project (unzip it if you need) and run the command:
 
 mocker.install.bat
 
 and following the instrunctions
 
 ## Uninstall
+
+Run the command:
+
+mocker.uninstall.bat
