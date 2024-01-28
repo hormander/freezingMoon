@@ -8,7 +8,7 @@ if not exist "%ProgramFiles%\apps\bin" (
 	md "%ProgramFiles%\apps\bin"
 )
 
-icacls "%ProgramFiles%\apps\bin" /grant "everyone":(OI)(CI)M
+icacls "%ProgramFiles%\apps\bin" /grant "everyone":(OI)(CI)M >nul 2>&1
 
 (for /f "delims=" %%i in (wsl/mocker.bat.txt) do (
     set "line=%%i"
@@ -19,7 +19,7 @@ icacls "%ProgramFiles%\apps\bin" /grant "everyone":(OI)(CI)M
     endlocal
 ))>"%ProgramFiles%\apps\bin\mocker.bat"
 
-icacls "%ProgramFiles%\apps\bin\mocker.bat" /grant "everyone":(OI)(CI)M
+icacls "%ProgramFiles%\apps\bin\mocker.bat" /grant "everyone":(OI)(CI)M >nul 2>&1
 
 timeout 1 >nul
 
