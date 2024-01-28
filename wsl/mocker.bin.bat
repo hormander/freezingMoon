@@ -28,8 +28,11 @@ echo.%PATH%|findstr /C:"%ProgramFiles%\apps\bin;" >nul 2>&1
 if errorlevel 1 (	
 	echo Updating PATH variable ...
 	
-	setx PATH "%PATH%;%ProgramFiles%\apps\bin;"
+	setx PATH "%PATH%;%ProgramFiles%\apps\bin;" >nul 2>&1
 	
-	setx /M PATH "%PATH%;%ProgramFiles%\apps\bin;"
+	setx /M PATH "%PATH%;%ProgramFiles%\apps\bin;" >nul 2>&1
 )
 
+set WSL_DISTRO_NAME "%DISTRO_NAME%" >nul 2>&1
+
+set WSL_DISTRO_USER "%DISTRO_USER%" >nul 2>&1

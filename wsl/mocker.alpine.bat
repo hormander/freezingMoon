@@ -18,7 +18,7 @@ rem Install packages
 rem
 
 wsl -d %DISTRO_NAME% apk add --update --no-cache busybox-openrc busybox-suid shadow shadow-uidmap
-wsl -d %DISTRO_NAME% apk add --update --no-cache docker docker-compose openrc 
+wsl -d %DISTRO_NAME% apk add --update --no-cache cgroup-tools docker docker-compose openrc 
 wsl -d %DISTRO_NAME% apk add --update --no-cache bash curl su-exec sudo
 
 rem
