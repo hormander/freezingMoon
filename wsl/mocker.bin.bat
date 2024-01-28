@@ -33,6 +33,6 @@ if errorlevel 1 (
 	setx /M PATH "%PATH%;%ProgramFiles%\apps\bin;" >nul 2>&1
 )
 
-set WSL_DISTRO_NAME "%DISTRO_NAME%" >nul 2>&1
+setx /M WSL_DISTRO_NAME "%DISTRO_NAME%" >nul 2>&1
 
-set WSL_DISTRO_USER "%DISTRO_USER%" >nul 2>&1
+setx /M WSL_DISTRO_USER "%DISTRO_USER%" >nul 2>&1
