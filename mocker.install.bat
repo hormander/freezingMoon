@@ -4,9 +4,11 @@ rem
 rem IMPORTANT: Run the script as Administrator
 rem
 
-set DISTRO_NAME=freezing_moon
+set "DISTRO_NAME=freezing_moon"
+set /p "DISTRO_NAME=Enter value or just ENTER for default [%DISTRO_NAME%] : "
 
-set DISTRO_USER=marco
+set "DISTRO_USER=euronymous"
+set /p "DISTRO_USER=Enter value or just ENTER for default [%DISTRO_USER%] : "
 
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
