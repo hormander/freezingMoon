@@ -13,8 +13,8 @@ icacls "%ProgramFiles%\apps\bin" /grant "everyone":(OI)(CI)M
 (for /f "delims=" %%i in (wsl/mocker.bat.txt) do (
     set "line=%%i"
     setlocal enabledelayedexpansion
-	set "line=!line:__my_distro__=%DISTRO_NAME%!"
-	set "line=!line:__my_user__=%DISTRO_USER%!"
+	set "line=!line:__my_wsl_distro__=%DISTRO_NAME%!"
+	set "line=!line:__my_wsl_user__=%DISTRO_USER%!"
     echo !line!
     endlocal
 ))>"%ProgramFiles%\apps\bin\mocker.bat"
