@@ -17,9 +17,9 @@ rem
 rem Install packages
 rem
 
-wsl -d %DISTRO_NAME% apk add --update --no-cache busybox-openrc busybox-suid shadow shadow-uidmap
-wsl -d %DISTRO_NAME% apk add --update --no-cache cgroup-tools docker docker-compose openrc 
+wsl -d %DISTRO_NAME% apk add --update --no-cache openrc busybox-openrc busybox-suid shadow shadow-uidmap
 wsl -d %DISTRO_NAME% apk add --update --no-cache bash curl su-exec sudo
+wsl -d %DISTRO_NAME% apk add --update --no-cache cgroup-tools docker docker-compose rootlesskit-docker-proxy docker-bash-completion
 
 rem
 rem Add user
