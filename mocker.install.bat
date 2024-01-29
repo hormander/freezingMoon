@@ -14,12 +14,8 @@ NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
 	timeout 1 >nul
     echo Installing distro %DISTRO_NAME% for user %DISTRO_USER% ...
-	timeout 1 >nul
     echo ...
-	timeout 1 >nul
-    echo ...
-	timeout 1 >nul
-    echo ...
+	timeout 3 >nul
 ) ELSE (
     echo Installation failed: Administrator PRIVILEGES Required! 
 	exit /B
